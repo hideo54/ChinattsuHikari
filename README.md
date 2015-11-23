@@ -26,10 +26,11 @@ Ver 1.0
 
 ### Chinachuが置いてあるServer
 
-1. このリポジトリを落とす
-2. post-to-slack.shをChinachuが実行可能となるようにする
-3. post-to-slack.shを編集し、2行目末尾のURLを控えておいたWebhook URLで上書き
-4. Chinachuのconfig.jsonに"recordedCommand"を追加、post-to-slack.shのパスを指定
+1. **jqをインストール**
+2. このリポジトリを落とす
+3. post-to-slack.shをChinachuが実行可能となるようにする
+4. post-to-slack.shを編集し、2行目末尾のURLを控えておいたWebhook URLで上書き
+5. Chinachuのconfig.jsonに"recordedCommand"を追加、post-to-slack.shのパスを指定
 
 ## 連絡先
 
