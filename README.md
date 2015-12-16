@@ -31,10 +31,10 @@ Ver 1.1
 3. post-to-slack.shをChinachuが実行可能となるようにする
 4. post-to-slack.shを編集し、
     * 3行目のアドレスを使用しているChinachuのアドレスで上書き (**末尾"/"なし**)
-    * 5行目末尾のURLを控えておいたWebhook URLで上書き
+    * 10行目のURLを控えておいたWebhook URLで上書き
 5. Chinachuのconfig.jsonに"recordedCommand"を追加、post-to-slack.shのパスを指定
 
 ## 連絡先
 
 * Twitter: [@hideo54](https://twitter.com/hideo54)
-* Email: hideo54.pub@gmail.com
+* Email: contact@hideo54.com
