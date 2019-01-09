@@ -33,7 +33,8 @@ Ver 2.1
 1. 各`.sh`ファイルをChinachuが実行可能となるようにする
 1. 各`.js`ファイルの1~3行目の値を適宜上書き (**`CHINACHU_HOST`の値は末尾`/`なし**)
 1. Chinachuの`config.json`に以下を追加
-`"recordedCommand": "./ChinattsuHikari/recordedCommand.sh"`
+`"recordedCommand": "./ChinattsuHikari/recordedCommand.sh,"
+"storageLowSpaceCommand": "./commands/storageLowSpaceCommand.sh"`
 
 ## 連絡先
 
