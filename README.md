@@ -12,7 +12,7 @@
 
 ## バージョン
 
-Ver 2.0
+Ver 2.0.1
 
 ## 使い方
 
@@ -28,10 +28,12 @@ Ver 2.0
 ### Chinachuが置いてあるServer
 
 1. (入っていない場合は)Node.js, requestライブラリ, jqをインストール
-1. このリポジトリを落とす
+1. Chinachuのディレクトリのトップに移動
+1. このリポジトリをcloneする
 1. 各`.sh`ファイルをChinachuが実行可能となるようにする
 1. 各`.js`ファイルの1~3行目の値を適宜上書き (**`CHINACHU_HOST`の値は末尾`/`なし**)
-1. Chinachuの`config.json`に`recordedCommand`を追加、`recordedCommand.sh`のパスを指定
+1. Chinachuの`config.json`に以下を追加
+`"recordedCommand": "./ChinattsuHikari/recordedCommand.sh"`
 
 ## 連絡先
 
