@@ -11,6 +11,10 @@ const detail = data.detail;
 const channel = data.channel.name;
 const minutes = Math.ceil(parseInt(data.seconds) / 60);
 
+const fs = require('fs');
+const sizeInBytes = fs.statSync(path).size;
+const sizeInGiB = (sizeInBytes / (2**30)).toFixed(2);
+
 const iconUrl = 'https://pbs.twimg.com/profile_images/937972459621425155/EeG-MiOQ_400x400.jpg';
 
 const payload = {
@@ -26,14 +30,24 @@ const payload = {
         text: detail,
         fields: [
             {
-                title: "放送局",
+                title: '放送局',
                 value: channel,
                 short: true
             },
             {
-                title: "放送時間",
-                value: minutes,
+                title: '放送時間',
+                value: `${minutes}分`,
                 short: true
+            },
+            {
+                title: 'ファイル容量',
+                value: `${sizeInGiB}GiB`,
+                short: true
+            },
+            {
+                title: 'ファイル',
+                value: path,
+                short: false
             }
         ],
         image_url: `${CHINACHU_HOST}/api/recorded/${id}/preview.png?pos=30`
