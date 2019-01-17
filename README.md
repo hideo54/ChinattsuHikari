@@ -12,11 +12,11 @@
 
 ## バージョン
 
-Ver 2.1
+Ver 2.2
 
 ## 使い方
 
-### Slack Incoming Webhook
+### Slack Incoming Webhook URL を入手
 
 1. Slackにアクセス
 1. "Configure Integrations"
@@ -31,7 +31,9 @@ Ver 2.1
 1. Chinachuのディレクトリのトップに移動
 1. このリポジトリをcloneする
 1. 各`.sh`ファイルをChinachuが実行可能となるようにする
-1. 各`.js`ファイルの1~3行目の値を適宜上書き (**`CHINACHU_HOST`の値は末尾`/`なし**)
+1. `yarn` (or `npm i` if you like)
+1. `cp config-sample.yaml config.yaml`
+1. `config.yaml`の各値を適宜上書き (**`chinachu_host`の値は末尾`/`なし**)
 1. Chinachuの`config.json`に以下を追加
 `"recordedCommand": "./ChinattsuHikari/recordedCommand.sh,"
 "storageLowSpaceCommand": "./commands/storageLowSpaceCommand.sh"`

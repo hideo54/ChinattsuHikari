@@ -1,0 +1,11 @@
+{
+    "name": "ChinattsuHikari",
+    "version": "1.0.0",
+    "repository": "https://github.com/hideo54/ChinattsuHikari",
+    "author": "hideo54 <hideo54@hideo54.com>",
+    "license": "Apache-2.0",
+    "private": true,
+    "dependencies": {
+        "js-yaml": "^3.12.1"
+    }
+}
