@@ -27,7 +27,7 @@ const payload = {
     icon_url: iconUrl,
     attachments: [{
         fallback: `録画終了です〜♡: ${title}`,
-        color: 'good',
+        color: sizeInBytes === 0 ? 'danger' : 'good',
         title: title,
         title_link: `${chinachu_host}/#!/program/view/id=${id}/`,
         text: detail,
