@@ -14,7 +14,6 @@ const detail = data.detail;
 const channel = data.channel.name;
 const minutes = Math.ceil(parseInt(data.seconds) / 60);
 
-const fs = require('fs');
 const sizeInBytes = fs.statSync(path).size;
 const sizeInGiB = (sizeInBytes / (2**30)).toFixed(2);
 
