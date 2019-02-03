@@ -37,7 +37,7 @@ Ver 2.2
 1. Chinachuの`config.json`に以下を追加
 ```
 "recordedCommand": "./ChinattsuHikari/recordedCommand.sh",
-"storageLowSpaceCommand": "./commands/storageLowSpaceCommand.sh"
+"storageLowSpaceCommand": "./ChinattsuHikari/storageLowSpaceCommand.sh"
 ```
 
 ## 連絡先
