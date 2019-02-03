@@ -35,8 +35,10 @@ Ver 2.2
 1. `cp config-sample.yaml config.yaml`
 1. `config.yaml`の各値を適宜上書き (**`chinachu_host`の値は末尾`/`なし**)
 1. Chinachuの`config.json`に以下を追加
-`"recordedCommand": "./ChinattsuHikari/recordedCommand.sh,"
-"storageLowSpaceCommand": "./commands/storageLowSpaceCommand.sh"`
+```
+"recordedCommand": "./ChinattsuHikari/recordedCommand.sh",
+"storageLowSpaceCommand": "./commands/storageLowSpaceCommand.sh"
+```
 
 ## 連絡先
 
