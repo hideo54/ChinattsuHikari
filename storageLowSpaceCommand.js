@@ -1,13 +1,13 @@
 const yaml = require('js-yaml');
 const fs = require('fs');
 const config = yaml.safeLoad(fs.readFileSync('./ChinattsuHikari/config.yaml'));
-const SLACK_CHANNEL = config.slack_channel;
-const SLACK_WEBHOOK = config.slack_webhook;
+const slackChannel = config.slack_channel;
+const slackWebhook = config.slack_webhook;
 
 const iconUrl = 'https://pbs.twimg.com/profile_images/937972459621425155/EeG-MiOQ_400x400.jpg';
 
 const payload = {
-    channel: SLACK_CHANNEL,
+    channel: slackChannel,
     username: 'チナッツ光',
     icon_url: iconUrl,
     attachments: [{
@@ -18,4 +18,4 @@ const payload = {
 };
 
 const request = require('request');
-request.post(SLACK_WEBHOOK, { form: { payload: JSON.stringify(payload) } });
+request.post(slackWebhook, { form: { payload: JSON.stringify(payload) } });

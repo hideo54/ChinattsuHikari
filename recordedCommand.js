@@ -1,9 +1,9 @@
 const yaml = require('js-yaml');
 const fs = require('fs');
 const config = yaml.safeLoad(fs.readFileSync('./ChinattsuHikari/config.yaml'));
-const chinachu_host = config.chinachu_host;
-const slack_channel = config.slack_channel;
-const slack_webhook = config.slack_webhook;
+const chinachuHost = config.chinachu_host;
+const slackChannel = config.slack_channel;
+const slackWebhook = config.slack_webhook;
 
 const process = require('process');
 const path = process.argv[2];
@@ -20,7 +20,7 @@ const sizeInGiB = (sizeInBytes / (2**30)).toFixed(2);
 const iconUrl = 'https://pbs.twimg.com/profile_images/937972459621425155/EeG-MiOQ_400x400.jpg';
 
 const payload = {
-    channel: slack_channel,
+    channel: slackChannel,
     username: 'チナッツ光',
     text: '録画終了です〜♡',
     icon_url: iconUrl,
@@ -28,7 +28,7 @@ const payload = {
         fallback: `録画終了です〜♡: ${title}`,
         color: sizeInBytes === 0 ? 'danger' : 'good',
         title: title,
-        title_link: `${chinachu_host}/#!/program/view/id=${id}/`,
+        title_link: `${chinachuHost}/#!/program/view/id=${id}/`,
         text: detail,
         fields: [
             {
@@ -52,9 +52,9 @@ const payload = {
                 short: false
             }
         ],
-        image_url: `${chinachu_host}/api/recorded/${id}/preview.png?pos=30`
+        image_url: `${chinachuHost}/api/recorded/${id}/preview.png?pos=30`
     }]
 };
 
 const request = require('request');
-request.post(slack_webhook, { form: { payload: JSON.stringify(payload) } });
+request.post(slackWebhook, { form: { payload: JSON.stringify(payload) } });
