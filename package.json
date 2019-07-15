@@ -6,6 +6,6 @@
     "license": "Apache-2.0",
     "private": true,
     "dependencies": {
-        "js-yaml": "^3.12.1"
+        "js-yaml": "^3.13.1"
     }
 }
